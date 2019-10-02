@@ -6,4 +6,4 @@ The calculator accepts input numbers from 1 to 10, inclusive, no more.
 The calculator can only work with integers.
 The calculator can only work with Arabic or Roman numerals at a time
 
-// Realased by Salawat Sirazetdinov
+// Created by Salawat Sirazetdinov

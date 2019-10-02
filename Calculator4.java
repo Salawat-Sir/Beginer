@@ -1,4 +1,5 @@
 // Программа КАЛЬКУЛЯТОР
+//Разработал Сиразетдинов Салават
 import java.io.*; //для ввода-вывода
 import java.util.Arrays; //для проверки вхождения символов в массив
 //import mCheck.*;
@@ -100,8 +101,13 @@ class SolveIt {
 			else Str1="";
 			if (Val2 != 0) Str2=roman[Val2-1];
 			else Str2="";
+			if(Val1-Val2 == 0) {
+				Str1="nulla";
+				Str2="";
+			}
 			ResultRoman=Str1+Str2;
 		}
+		
 		else {
 			System.out.println("Ошибка - неверный ввод данных");
 			System.exit(0);
@@ -163,7 +169,7 @@ class Calculator4 {
 						mySolve.Str2=ValRoman1.toUpperCase();
 						System.out.println("ответ: " + mySolve.SolveRoman());
 					}
-					else if (mySolve.Val1 > 0 & Integer.parseInt(ValArab1)<=10) {
+					else if (mySolve.Val1!=0 & Integer.parseInt(ValArab1) > 0 & Integer.parseInt(ValArab1)<=10) {
 						myCheck.Str=ValArab1;
 						mySolve.Val2=Integer.parseInt(ValArab1);
 						System.out.println("ответ: " + mySolve.SolveArab());

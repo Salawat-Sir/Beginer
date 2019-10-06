@@ -14,7 +14,7 @@ class mCheck  {
 	boolean mRomanFlag;
 	boolean mSignFlag;
 	boolean mArabVal;
-	String[] arab={"0", "1","2", "3", "4" ,"5","6","7","8","9","10"};
+	String[] arab={"0", "1","2","3","4","5","6","7","8","9","10"};
 	String[] roman={"I","II","III","IV","V","VI","VII","VIII","IX","X"};
 	String[] romanW={"X","XX","XXX","XL","L","LX","LXX","LXXX","XC","C"};
 	String[] MathSign={"-","+","*","/"};
@@ -101,13 +101,8 @@ class SolveIt {
 			else Str1="";
 			if (Val2 != 0) Str2=roman[Val2-1];
 			else Str2="";
-			if(Val1-Val2 == 0) {
-				Str1="nulla";
-				Str2="";
-			}
 			ResultRoman=Str1+Str2;
 		}
-		
 		else {
 			System.out.println("Ошибка - неверный ввод данных");
 			System.exit(0);
@@ -133,7 +128,7 @@ class Calculator4 {
 			c = (char) br.read();
 			//(символ преобразуем в строку)
             myCheck.Str=String.valueOf(c);
-			
+
 			try {
 				//если символ является арабской цифрой 
 				if (myCheck.CheckArab() & ValRoman1 == "") {ValArab1=ValArab1+c; myCheck.Str=ValArab1; }  // Не смешивать арабские с римскими числами
@@ -193,10 +188,10 @@ class Calculator4 {
 					/*Empty*/; //Пробел между символами не считать ошибкой
 				}
 				// если введены символы отличающиеся от арабских или римских цифр, то аварийный выход
-				else if (c != 'q') { 
-					System.out.println("Ошибка - неверный ввод данных");
-					System.exit(0);
-				}
+//				else if (c != 'q') { 
+//					System.out.println("Ошибка - неверный ввод данных");
+//					System.exit(0);
+//				}
 
 			}
 			catch (Error e) {
